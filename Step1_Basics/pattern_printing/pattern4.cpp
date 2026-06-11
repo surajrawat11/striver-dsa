@@ -1,15 +1,13 @@
 /*
-Pattern - 3: Right-Angled Number Pyramid
+Pattern - 4: Right-Angled Number Pyramid - II
 
-Given an integer N, print the following pattern:
-
-For N = 5:
+Given N = 5, the output is:
 
 1
-12
-123
-1234
-12345
+22
+333
+4444
+55555
 */
 
 #include <bits/stdc++.h>
@@ -17,14 +15,14 @@ using namespace std;
 
 class Solution {
 public:
-    // Function to print the number pattern
-    void pattern3(int N) {
+    // Function to print the pattern
+    void pattern4(int N) {
         // Outer loop for rows
         for (int i = 1; i <= N; i++) {
             // Inner loop for columns
-            // Print numbers from 1 to i
+            // Print the row number 'i' in each column
             for (int j = 1; j <= i; j++) {
-                cout << j << " ";
+                cout << i << " ";
             }
             // Move to the next row
             cout << endl;
@@ -40,7 +38,7 @@ int main() {
     int N = 5;
 
     // Call pattern function
-    sol.pattern3(N);
+    sol.pattern4(N);
 
     return 0;
 }
